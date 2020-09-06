@@ -18,6 +18,6 @@ I like teaching.
 # Achievements
 COEPian
 
-Awareded as "Rising Star of year" by tata technolgoies amongs 300+ candidates for useful contribution in a project.
+Awareded as "Rising Star of year" by Tata Technolgoies amongs 300+ candidates for useful contribution in a project.
 
 Received Appreciation for completion of a complex software project that helped client with direct cost savings benefits.
