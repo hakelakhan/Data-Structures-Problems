@@ -30,6 +30,20 @@ void bubbleSort(int* a, int n) {
         printArray(a, n);
     }
 }
+void selectionSort(int* a, int n) {
+    for(int i = 0; i < n; i++) {
+        int minIndex = i;
+        for(int j = i + 1; j < n; j++) {
+            if(a[j] < a[minIndex]) minIndex = j;
+        }        
+        int min = a[minIndex];
+        for(int k = minIndex ; k > i;  k--) {
+            a[k ] = a[k - 1];
+        }
+        a[i] = min;
+    }
+    
+ }
 void merge(int* a, int start, int mid, int end) {
     
     int l1 = (mid - start) + 1 ;
@@ -88,7 +102,7 @@ int main() {
     cout<<endl<<"You have entered following numbers"<<endl;
     printArray(arr, n);
     cout<<"Merge sort  :  "<<endl;
-    mergeSort(arr, n);
+    selectionSort(arr, n);
     cout<<"After sorting  :  "<<endl;
     printArray(arr, n);    
     char ch;
