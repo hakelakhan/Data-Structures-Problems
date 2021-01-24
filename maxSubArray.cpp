@@ -24,10 +24,9 @@ int main() {
     }
     */
     cout<<endl<<"You have entered following numbers"<<endl;
-    printArray(arr, n);
+    printArray<int>(arr, n);
     cout<<"Maximum subarray sum is " << maxSubArray(arr, n);
     char ch;
     cin>>ch;    
-    return 0;
     return 0;
 }
