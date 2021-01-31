@@ -27,7 +27,7 @@ void bubbleSort(int* a, int n) {
             }
         }
         cout<<"Pass : " <<i<<endl;
-        printArray(a, n);
+        printArray<int>(a, n);
     }
 }
 void selectionSort(int* a, int n) {
@@ -100,11 +100,11 @@ int main() {
     }
     */
     cout<<endl<<"You have entered following numbers"<<endl;
-    printArray(arr, n);
+    printArray<int>(arr, n);
     cout<<"Merge sort  :  "<<endl;
     selectionSort(arr, n);
     cout<<"After sorting  :  "<<endl;
-    printArray(arr, n);    
+    printArray<int>(arr, n);    
     char ch;
     cin>>ch;    
     return 0;
