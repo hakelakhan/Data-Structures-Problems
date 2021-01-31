@@ -8,11 +8,20 @@ void printArray(T* a, int n){
     }
     cout<<endl;
 }
+int min(int a, int b) {
+    return a < b ? a : b;
+}
+bool isEven(int num) {
+    return (num & 1) != 1;
+}
+bool isOdd(int num) {
+    return (num & 1) == 1;
+}
 int* generateIntRandomArray(int size, int min, int max) {
     int* arr = new int[size];
     srand(time(NULL));
     for(int i = 0; i < size; i++) {
-        arr[i] = min + rand() % (max + 1);
+        arr[i] = min + rand() % (max - min + 1);
     }
     return arr;
 }
