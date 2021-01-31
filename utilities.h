@@ -53,3 +53,6 @@ void waitForKey() {
     char key;
     cin>>key;
 }
+bool validateIndex(int index, int size) {
+    return index >= 0 && index < size; 
+}
