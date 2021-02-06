@@ -88,8 +88,38 @@ void divide(int * a, int start, int end) {
 void mergeSort(int* a, int n) {
     divide(a, 0, n - 1);
 }
+int partition(int* arr, int start, int end ) {
+    //int arr[] = {102, 45, 98 , 32 , 17, 51};    
+    int pivot = arr[end];   //51
+    int i = start - 1;    
+    for(int j = start; j < end; j++) {
+        if(arr[j] < pivot) {                    
+            i++;
+            int tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;            
+        }
+    }
+    i++;
+    int tmp = arr[end];
+    arr[end] = arr[i];
+    arr[i] = tmp;    
+
+    return i ;
+}
+void quickSortArr(int* arr, int start, int end ) {
+    if( start < end) {
+        int pivotIndex = partition(arr, start, end);
+        quickSortArr(arr, start , pivotIndex - 1);
+        quickSortArr(arr, pivotIndex + 1, end);
+    }
+}
+void quickSort(int* arr, int n) {
+    quickSortArr(arr, 0, n - 1);
+}
 int main() {
-    int arr[] = {454,45, 545, 453, 456, 5};
+    //int arr[] = {454,45, 545, 453, 456, 5};
+    int arr[] = {102, 102, 98 , 32 , 17, 51};
     int n = 6;
     /*cout<<"How many numbers you want to enter in array"<<endl;
     cin>>n;
@@ -101,8 +131,8 @@ int main() {
     */
     cout<<endl<<"You have entered following numbers"<<endl;
     printArray<int>(arr, n);
-    cout<<"Merge sort  :  "<<endl;
-    selectionSort(arr, n);
+    cout<<"Quick sort  :  "<<endl;
+    quickSort(arr, n);
     cout<<"After sorting  :  "<<endl;
     printArray<int>(arr, n);    
     char ch;
