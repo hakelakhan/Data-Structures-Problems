@@ -2,11 +2,18 @@
 #include <iomanip>
 using namespace std;
 template <typename T>
-void printArray(T* a, int n){
+void printArray(T* a, int ){
     for(int i = 0; i < n; i++) {
         cout<<a[i] << " ";
     }
     cout<<endl;
+}
+template <typename T>
+void swap(T* a, T* b) {
+    T tmp;
+    tmp = *a;
+    *a = *b;
+    *b = tmp;
 }
 int min(int a, int b) {
     return a < b ? a : b;
